@@ -6,6 +6,10 @@ namespace Modul4HW3
     {
         public static void Main(string[] args)
         {
+            using (AppContext app = new AppContext())
+            {
+                app.SaveChanges();
+            }
         }
     }
 }
