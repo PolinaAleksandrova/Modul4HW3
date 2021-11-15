@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modul4HW3.Models
+namespace BankSolution.DataAccess.Models
 {
     public class Office
     {

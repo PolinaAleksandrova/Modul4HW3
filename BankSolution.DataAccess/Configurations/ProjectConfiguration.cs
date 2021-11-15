@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Modul4HW3.Models;
+using BankSolution.DataAccess.Models;
 
-namespace Modul4HW3.Configurations
+namespace BankSolution.DataAccess.Configurations
 {
     public class ProjectConfiguration : IEntityTypeConfiguration<Project>
     {

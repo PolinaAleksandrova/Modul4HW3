@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul4HW3", "Modul4HW3\Modul4HW3.csproj", "{C1360095-5A2E-42A8-A582-0AFD336F7795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul4HW3", "Modul4HW3\Modul4HW3.csproj", "{C1360095-5A2E-42A8-A582-0AFD336F7795}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankSolution.DataAccess", "BankSolution.DataAccess\BankSolution.DataAccess.csproj", "{3C85997D-1B9F-47CA-8E45-C05C7184A383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C1360095-5A2E-42A8-A582-0AFD336F7795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1360095-5A2E-42A8-A582-0AFD336F7795}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1360095-5A2E-42A8-A582-0AFD336F7795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C85997D-1B9F-47CA-8E45-C05C7184A383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C85997D-1B9F-47CA-8E45-C05C7184A383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C85997D-1B9F-47CA-8E45-C05C7184A383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C85997D-1B9F-47CA-8E45-C05C7184A383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
