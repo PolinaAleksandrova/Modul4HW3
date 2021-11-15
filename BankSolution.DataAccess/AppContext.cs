@@ -18,6 +18,7 @@ namespace BankSolution.DataAccess
         {
         }
 
+        public DbSet<Client> Clients { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeProject> EmployeeProjects { get; set; }
         public DbSet<Office> Offices { get; set; }
@@ -26,6 +27,7 @@ namespace BankSolution.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new ClientConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeProjectConfiguration());
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
