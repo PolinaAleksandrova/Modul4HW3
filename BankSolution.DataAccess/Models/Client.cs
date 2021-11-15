@@ -8,13 +8,13 @@ namespace BankSolution.DataAccess.Models
 {
     public class Client
     {
-        public int Id { get; set; }
+        public int ClientId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Company { get; set; }
         public string Location { get; set; }
         public DateTime FirstOrder { get; set; }
         public string Email { get; set; }
-        public List<Project> projects { get; set; }
+        public List<Project> projects { get; set; } = new List<Project>();
     }
 }
