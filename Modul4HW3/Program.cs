@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -12,9 +13,9 @@ namespace BankSolution.DataAccess
             var dbOptionsBuilder = new DbContextOptionsBuilder<AppContext>();
             var connectionString = configuration.GetConnectionString("DataModel");
             dbOptionsBuilder.UseSqlServer(connectionString, i => i.CommandTimeout(20));
+            dbOptionsBuilder.LogTo(System.Console.Write);
             var appContext = new AppContext(dbOptionsBuilder.Options);
             appContext.Database.Migrate();
-
             appContext.SaveChanges();
         }
     }

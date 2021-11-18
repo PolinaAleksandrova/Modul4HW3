@@ -10,7 +10,7 @@ using BankSolution.DataAccess;
 namespace BankSolution.DataAccess.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211115140138_InitialCreate.Designer")]
+    [Migration("20211118114213_InitialCreate.Designer")]
     public partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace BankSolution.DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Employee", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Employee", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -65,7 +65,7 @@ namespace BankSolution.DataAccess.Migrations
                 b.ToTable("Employee");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.EmployeeProject", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.EmployeeProject", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -97,7 +97,7 @@ namespace BankSolution.DataAccess.Migrations
                 b.ToTable("EmployeeProject");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Office", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Office", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -122,7 +122,7 @@ namespace BankSolution.DataAccess.Migrations
                 b.ToTable("Office");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Project", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Project", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -150,7 +150,7 @@ namespace BankSolution.DataAccess.Migrations
                 b.ToTable("Project");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Title", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Title", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -169,15 +169,15 @@ namespace BankSolution.DataAccess.Migrations
                 b.ToTable("Title");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Employee", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Employee", b =>
             {
-                b.HasOne("ModuleHW.DataAccess.Models.Office", "Office")
+                b.HasOne("BankSolution.DataAccess.Models.Office", "Office")
                     .WithMany("Employees")
                     .HasForeignKey("OfficeId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
 
-                b.HasOne("ModuleHW.DataAccess.Models.Title", "Title")
+                b.HasOne("BankSolution.DataAccess.Models.Title", "Title")
                     .WithMany("Employees")
                     .HasForeignKey("TitleId")
                     .OnDelete(DeleteBehavior.Cascade)
@@ -188,15 +188,15 @@ namespace BankSolution.DataAccess.Migrations
                 b.Navigation("Title");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.EmployeeProject", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.EmployeeProject", b =>
             {
-                b.HasOne("ModuleHW.DataAccess.Models.Employee", "Employee")
+                b.HasOne("BankSolution.DataAccess.Models.Employee", "Employee")
                     .WithMany("EmployeeProject")
                     .HasForeignKey("EmployeeId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
 
-                b.HasOne("ModuleHW.DataAccess.Models.Project", "Project")
+                b.HasOne("BankSolution.DataAccess.Models.Project", "Project")
                     .WithMany("EmployeeProject")
                     .HasForeignKey("ProjectId")
                     .OnDelete(DeleteBehavior.Cascade)
@@ -207,22 +207,22 @@ namespace BankSolution.DataAccess.Migrations
                 b.Navigation("Project");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Employee", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Employee", b =>
             {
                 b.Navigation("EmployeeProject");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Office", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Office", b =>
             {
                 b.Navigation("Employees");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Project", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Project", b =>
             {
                 b.Navigation("EmployeeProject");
             });
 
-            modelBuilder.Entity("ModuleHW.DataAccess.Models.Title", b =>
+            modelBuilder.Entity("BankSolution.DataAccess.Models.Title", b =>
             {
                 b.Navigation("Employees");
             });

@@ -18,7 +18,6 @@ namespace BankSolution.DataAccess.Configurations
             builder.Property(c => c.LastName).HasMaxLength(50).IsRequired();
             builder.Property(c => c.Company).IsRequired();
             builder.Property(c => c.Location).IsRequired();
-            builder.Property(c => c.Email).HasMaxLength(50).IsRequired();
 
             builder.HasData(new List<Client>()
             {

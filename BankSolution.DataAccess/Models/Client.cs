@@ -14,7 +14,6 @@ namespace BankSolution.DataAccess.Models
         public string Company { get; set; }
         public string Location { get; set; }
         public DateTime FirstOrder { get; set; }
-        public string Email { get; set; }
         public List<Project> projects { get; set; } = new List<Project>();
     }
 }
